@@ -280,6 +280,126 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://wangleileichina.github.io/p/Tmux.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="LeileiWang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="PREPARES">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/p/Tmux.html" itemprop="url">
+                  Tmux
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2023-11-16T17:24:50+08:00">
+                2023-11-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="terminal-multiplexer"><a href="#terminal-multiplexer" class="headerlink" title="terminal multiplexer"></a>terminal multiplexer</h1><h2 id="custom-config"><a href="#custom-config" class="headerlink" title="custom config"></a>custom config</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># set the base index for windows to 1 instead of 0</span></span><br><span class="line"><span class="keyword">set</span> -g base-<span class="keyword">index</span> <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># set the base index for panes to 1 instead of 0</span></span><br><span class="line">setw -g pane-base-<span class="keyword">index</span> <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># reload the file with prefix r</span></span><br><span class="line">bind r <span class="keyword">source</span>-<span class="keyword">file</span> ~/.tmux.conf \; display "Reloaded!"</span><br><span class="line"></span><br><span class="line"><span class="comment"># splitting panes with | and -</span></span><br><span class="line">bind | split-window -h</span><br><span class="line">bind - split-window -v</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">set</span> -g mouse <span class="keyword">off</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># set the status line's color</span></span><br><span class="line"><span class="keyword">set</span> -g <span class="keyword">status</span>-<span class="keyword">style</span> fg=white,bg=black</span><br><span class="line"></span><br><span class="line"><span class="comment"># set the color of the window list</span></span><br><span class="line">setw -g <span class="keyword">window</span>-<span class="keyword">status</span>-<span class="keyword">style</span> fg=cyan,bg=black</span><br><span class="line"></span><br><span class="line"><span class="comment"># set colors for the active window</span></span><br><span class="line">setw -g <span class="keyword">window</span>-<span class="keyword">status</span>-<span class="keyword">current</span>-<span class="keyword">style</span> fg=white,bold,bg=green</span><br><span class="line"></span><br><span class="line"><span class="comment"># colors for pane borders</span></span><br><span class="line">setw -g pane-border-<span class="keyword">style</span> fg=green,bg=black</span><br><span class="line">setw -g pane-active-border-<span class="keyword">style</span> fg=<span class="keyword">while</span>,bg=yellow</span><br><span class="line"></span><br><span class="line"><span class="comment"># active pane normal, other shaded out</span></span><br><span class="line">setw -g <span class="keyword">window</span>-<span class="keyword">style</span> fg-colour240,bg=colour235</span><br><span class="line">setw -g <span class="keyword">window</span>-active-<span class="keyword">style</span> fg=white,bg=black</span><br><span class="line"></span><br><span class="line"><span class="comment"># command/message line</span></span><br><span class="line"><span class="keyword">set</span> -g message-<span class="keyword">style</span> fg=<span class="keyword">while</span>,bold,bg=black</span><br><span class="line"></span><br><span class="line"><span class="comment"># status line right side 21-Otc 13:37</span></span><br><span class="line"><span class="keyword">set</span> -g <span class="keyword">status</span>-<span class="keyword">right</span> <span class="string">"#[fg=cyan]%d %b %R"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># status line left side to show session:window:pane</span></span><br><span class="line"><span class="keyword">set</span> -g <span class="keyword">status</span>-<span class="keyword">left</span>-<span class="keyword">length</span> <span class="number">40</span></span><br><span class="line"><span class="keyword">set</span> -g <span class="keyword">status</span>-<span class="keyword">left</span> <span class="string">"#[fg=green]Session:#S:#[fg=yellow]#I #[fg=cyan]#P  "</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># update the status line every sixty seconds</span></span><br><span class="line"><span class="keyword">set</span> -g <span class="keyword">status</span>-<span class="built_in">interval</span> <span class="number">60</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># center the window list in the status line</span></span><br><span class="line"><span class="keyword">set</span> -g <span class="keyword">status</span>-justify centre</span><br><span class="line"></span><br><span class="line"><span class="comment"># enbale vi keys</span></span><br><span class="line">setw -g <span class="keyword">mode</span>-<span class="keyword">keys</span> vi</span><br><span class="line"></span><br><span class="line"><span class="comment"># log output to a text file on demand</span></span><br><span class="line">bind P <span class="keyword">pipe</span>-pane -o <span class="string">"cat &gt;&gt;~/#W.log"</span> \; display "Toggled logging to ~/<span class="comment">#W.log"</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference:"></a>Reference:</h2><p>tmux 2: Productive Mouse-Free development</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="https://wangleileichina.github.io/p/Algorithm-Templates.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -364,126 +484,6 @@
 <h1 id="trie"><a href="#trie" class="headerlink" title="trie"></a>trie</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Trie</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span> -&gt; <span class="keyword">None</span>:</span></span><br><span class="line">        self.root = &#123;&#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">insert</span><span class="params">(self, word)</span>:</span></span><br><span class="line">        cur = self.root</span><br><span class="line">        <span class="keyword">for</span> c <span class="keyword">in</span> word:</span><br><span class="line">            <span class="keyword">if</span> c <span class="keyword">not</span> <span class="keyword">in</span> cur:</span><br><span class="line">                cur[c] = &#123;&#125;</span><br><span class="line">            cur = cur[c]</span><br><span class="line">        cur[<span class="string">'#'</span>] = <span class="literal">True</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">search</span><span class="params">(self, word)</span>:</span></span><br><span class="line">        cur = self.root</span><br><span class="line">        <span class="keyword">for</span> c <span class="keyword">in</span> word:</span><br><span class="line">            <span class="keyword">if</span> c <span class="keyword">not</span> <span class="keyword">in</span> cur:</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">            cur = cur[c]</span><br><span class="line">        <span class="comment"># return cur['#']</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">True</span> <span class="keyword">if</span> cur <span class="keyword">and</span> <span class="string">'#'</span> <span class="keyword">in</span> cur <span class="keyword">else</span> <span class="literal">False</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">startWith</span><span class="params">(self, prefix)</span>:</span></span><br><span class="line">        cur = self.root</span><br><span class="line">        <span class="keyword">for</span> c <span class="keyword">in</span> prefix:</span><br><span class="line">            <span class="keyword">if</span> c <span class="keyword">not</span> <span class="keyword">in</span> cur:</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">            cur = cur[c]</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">True</span></span><br></pre></td></tr></table></figure>
 
 <h1 id="quick-sort"><a href="#quick-sort" class="headerlink" title="quick sort"></a>quick sort</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> random <span class="keyword">import</span> randint</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">quick_sort</span><span class="params">(nums)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">partition</span><span class="params">(lo, hi)</span>:</span></span><br><span class="line">        rand_idx = randint(lo, hi)</span><br><span class="line">        nums[rand_idx], nums[hi] = nums[hi], nums[rand_idx]</span><br><span class="line">        pivot = nums[hi]</span><br><span class="line">        i = lo</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(lo, hi):</span><br><span class="line">            <span class="keyword">if</span> nums[j] &lt; pivot:</span><br><span class="line">                <span class="comment"># i停留在大于pivot的数， 等到j找到下一个小于pivot的数交换</span></span><br><span class="line">                nums[i], nums[j] = nums[j], nums[i]</span><br><span class="line">                i += <span class="number">1</span></span><br><span class="line">        nums[i], nums[hi] = nums[hi], nums[i]</span><br><span class="line">        <span class="keyword">return</span> i</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">sort</span><span class="params">(lo, hi)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> lo &gt;= hi:</span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line">        idx = partition(lo, hi)</span><br><span class="line">        sort(lo, idx - <span class="number">1</span>) <span class="comment">### idx - 1</span></span><br><span class="line">        sort(idx + <span class="number">1</span>, hi)</span><br><span class="line"></span><br><span class="line">    sort(<span class="number">0</span>, len(nums) - <span class="number">1</span>)</span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://wangleileichina.github.io/p/tmux.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="LeileiWang">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="PREPARES">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/p/tmux.html" itemprop="url">
-                  Tmux
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2023-03-06T23:49:50+08:00">
-                2023-03-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="terminal-multiplexer"><a href="#terminal-multiplexer" class="headerlink" title="terminal multiplexer"></a>terminal multiplexer</h1><h2 id="custom-config"><a href="#custom-config" class="headerlink" title="custom config"></a>custom config</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># set the base index for windows to 1 instead of 0</span></span><br><span class="line"><span class="keyword">set</span> -g base-<span class="keyword">index</span> <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># set the base index for panes to 1 instead of 0</span></span><br><span class="line">setw -g pane-base-<span class="keyword">index</span> <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># reload the file with prefix r</span></span><br><span class="line">bind r <span class="keyword">source</span>-<span class="keyword">file</span> ~/.tmux.conf \; display "Reloaded!"</span><br><span class="line"></span><br><span class="line"><span class="comment"># splitting panes with | and -</span></span><br><span class="line">bind | split-window -h</span><br><span class="line">bind - split-window -v</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">set</span> -g mouse <span class="keyword">off</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># set the status line's color</span></span><br><span class="line"><span class="keyword">set</span> -g <span class="keyword">status</span>-<span class="keyword">style</span> fg=white,bg=black</span><br><span class="line"></span><br><span class="line"><span class="comment"># set the color of the window list</span></span><br><span class="line">setw -g <span class="keyword">window</span>-<span class="keyword">status</span>-<span class="keyword">style</span> fg=cyan,bg=black</span><br><span class="line"></span><br><span class="line"><span class="comment"># set colors for the active window</span></span><br><span class="line">setw -g <span class="keyword">window</span>-<span class="keyword">status</span>-<span class="keyword">current</span>-<span class="keyword">style</span> fg=white,bold,bg=green</span><br><span class="line"></span><br><span class="line"><span class="comment"># colors for pane borders</span></span><br><span class="line">setw -g pane-border-<span class="keyword">style</span> fg=green,bg=black</span><br><span class="line">setw -g pane-active-border-<span class="keyword">style</span> fg=<span class="keyword">while</span>,bg=yellow</span><br><span class="line"></span><br><span class="line"><span class="comment"># active pane normal, other shaded out</span></span><br><span class="line">setw -g <span class="keyword">window</span>-<span class="keyword">style</span> fg-colour240,bg=colour235</span><br><span class="line">setw -g <span class="keyword">window</span>-active-<span class="keyword">style</span> fg=white,bg=black</span><br><span class="line"></span><br><span class="line"><span class="comment"># command/message line</span></span><br><span class="line"><span class="keyword">set</span> -g message-<span class="keyword">style</span> fg=<span class="keyword">while</span>,bold,bg=black</span><br><span class="line"></span><br><span class="line"><span class="comment"># status line right side 21-Otc 13:37</span></span><br><span class="line"><span class="keyword">set</span> -g <span class="keyword">status</span>-<span class="keyword">right</span> <span class="string">"#[fg=cyan]%d %b %R"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># status line left side to show session:window:pane</span></span><br><span class="line"><span class="keyword">set</span> -g <span class="keyword">status</span>-<span class="keyword">left</span>-<span class="keyword">length</span> <span class="number">40</span></span><br><span class="line"><span class="keyword">set</span> -g <span class="keyword">status</span>-<span class="keyword">left</span> <span class="string">"#[fg=green]Session:#S:#[fg=yellow]#I #[fg=cyan]#P  "</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># update the status line every sixty seconds</span></span><br><span class="line"><span class="keyword">set</span> -g <span class="keyword">status</span>-<span class="built_in">interval</span> <span class="number">60</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># center the window list in the status line</span></span><br><span class="line"><span class="keyword">set</span> -g <span class="keyword">status</span>-justify centre</span><br><span class="line"></span><br><span class="line"><span class="comment"># enbale vi keys</span></span><br><span class="line">setw -g <span class="keyword">mode</span>-<span class="keyword">keys</span> vi</span><br><span class="line"></span><br><span class="line"><span class="comment"># log output to a text file on demand</span></span><br><span class="line">bind P <span class="keyword">pipe</span>-pane -o <span class="string">"cat &gt;&gt;~/#W.log"</span> \; display "Toggled logging to ~/<span class="comment">#W.log"</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference:"></a>Reference:</h2><p>tmux 2: Productive Mouse-Free development</p>
-
           
         
       
