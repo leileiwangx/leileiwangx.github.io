@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css">
 
 
-  <meta name="keywords" content="CLRS,">
+  <meta name="keywords" content="bisect,">
 
 
 
@@ -88,14 +88,14 @@
 
 
 <meta name="description" content="12345678910# 第一个大于等于target的indexdef bisect_left(nums, target):    lo, hi = 0, len(nums) ## hi = len(nums)    while lo &amp;lt; hi:        mi = lo + ((hi - lo) &amp;gt;&amp;gt; 1)        if nums[mi] &amp;gt;= target:">
-<meta name="keywords" content="CLRS">
+<meta name="keywords" content="bisect">
 <meta property="og:type" content="article">
 <meta property="og:title" content="bisect">
 <meta property="og:url" content="https://wangleileichina.github.io/p/bisect.html">
 <meta property="og:site_name" content="PREPARES">
 <meta property="og:description" content="12345678910# 第一个大于等于target的indexdef bisect_left(nums, target):    lo, hi = 0, len(nums) ## hi = len(nums)    while lo &amp;lt; hi:        mi = lo + ((hi - lo) &amp;gt;&amp;gt; 1)        if nums[mi] &amp;gt;= target:">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2023-11-16T09:44:54.728Z">
+<meta property="og:updated_time" content="2023-11-22T12:59:02.366Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="bisect">
 <meta name="twitter:description" content="12345678910# 第一个大于等于target的indexdef bisect_left(nums, target):    lo, hi = 0, len(nums) ## hi = len(nums)    while lo &amp;lt; hi:        mi = lo + ((hi - lo) &amp;gt;&amp;gt; 1)        if nums[mi] &amp;gt;= target:">
@@ -359,9 +359,9 @@
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">bisect_right</span><span class="params">(nums, target)</span>:</span></span><br><span class="line">    lo, hi = <span class="number">0</span>, len(nums) <span class="comment">## hi = len(nums)</span></span><br><span class="line">    <span class="keyword">while</span> lo &lt; hi:</span><br><span class="line">        mi = lo + ((hi - lo) &gt;&gt; <span class="number">1</span>)</span><br><span class="line">        <span class="keyword">if</span> nums[mi] &gt; target:</span><br><span class="line">            hi = mi</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            lo = mi + <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> lo</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">bisect_left</span><span class="params">(a, x, lo=<span class="number">0</span>, hi=None)</span>:</span></span><br><span class="line">    <span class="string">"""返回x插入a后所在位置的index（如果a中存在与x等值的元素，则插入到左侧）"""</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> lo &lt; <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">raise</span> ValueError(<span class="string">'lo must be non-negative'</span>)</span><br><span class="line">    <span class="keyword">if</span> hi <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">        hi = len(a)</span><br><span class="line">    <span class="keyword">while</span> lo &lt; hi:</span><br><span class="line">        mid = (lo+hi)//<span class="number">2</span></span><br><span class="line">        <span class="keyword">if</span> a[mid] &lt; x: lo = mid+<span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>: hi = mid</span><br><span class="line">    <span class="keyword">return</span> lo</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">bisect_left</span><span class="params">(a, x, lo=<span class="number">0</span>, hi=None)</span>:</span></span><br><span class="line">    <span class="string">"""返回x插入a后所在位置的index（如果a中存在与x等值的元素，则插入到左侧）"""</span></span><br><span class="line">    <span class="keyword">if</span> lo &lt; <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">raise</span> ValueError(<span class="string">'lo must be non-negative'</span>)</span><br><span class="line">    <span class="keyword">if</span> hi <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">        hi = len(a)</span><br><span class="line">    <span class="keyword">while</span> lo &lt; hi:</span><br><span class="line">        mid = (lo+hi)//<span class="number">2</span></span><br><span class="line">        <span class="keyword">if</span> a[mid] &lt; x: lo = mid+<span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>: hi = mid</span><br><span class="line">    <span class="keyword">return</span> lo</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">bisect_right</span><span class="params">(a, x, lo=<span class="number">0</span>, hi=None)</span>:</span></span><br><span class="line">    <span class="string">"""返回x插入a后所在位置的index（如果a中存在与x等值的元素，则插入到右侧）"""</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> lo &lt; <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">raise</span> ValueError(<span class="string">'lo must be non-negative'</span>)</span><br><span class="line">    <span class="keyword">if</span> hi <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">        hi = len(a)</span><br><span class="line">    <span class="keyword">while</span> lo &lt; hi:</span><br><span class="line">        mid = (lo+hi)//<span class="number">2</span></span><br><span class="line">        <span class="keyword">if</span> x &lt; a[mid]: hi = mid</span><br><span class="line">        <span class="keyword">else</span>: lo = mid+<span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> lo</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">bisect_right</span><span class="params">(a, x, lo=<span class="number">0</span>, hi=None)</span>:</span></span><br><span class="line">    <span class="string">"""返回x插入a后所在位置的index（如果a中存在与x等值的元素，则插入到右侧）"""</span></span><br><span class="line">    <span class="keyword">if</span> lo &lt; <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">raise</span> ValueError(<span class="string">'lo must be non-negative'</span>)</span><br><span class="line">    <span class="keyword">if</span> hi <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">        hi = len(a)</span><br><span class="line">    <span class="keyword">while</span> lo &lt; hi:</span><br><span class="line">        mid = (lo+hi)//<span class="number">2</span></span><br><span class="line">        <span class="keyword">if</span> x &lt; a[mid]: hi = mid</span><br><span class="line">        <span class="keyword">else</span>: lo = mid+<span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> lo</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">insort_left</span><span class="params">(a, x, lo=<span class="number">0</span>, hi=None)</span>:</span></span><br><span class="line">    <span class="string">"""将x插入a（如果a中存在与x等值的元素，则插入到左侧）"""</span></span><br><span class="line">    <span class="keyword">if</span> lo &lt; <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">raise</span> ValueError(<span class="string">'lo must be non-negative'</span>)</span><br><span class="line">    <span class="keyword">if</span> hi <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">        hi = len(a)</span><br><span class="line">    <span class="keyword">while</span> lo &lt; hi:</span><br><span class="line">        mid = (lo+hi)//<span class="number">2</span></span><br><span class="line">        <span class="keyword">if</span> a[mid] &lt; x: lo = mid+<span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>: hi = mid</span><br><span class="line">    a.insert(lo, x)</span><br></pre></td></tr></table></figure>
 
@@ -388,7 +388,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/CLRS/" rel="tag"># CLRS</a>
+            <a href="/tags/bisect/" rel="tag"># bisect</a>
           
         </div>
       
@@ -474,7 +474,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">47</span>
+                <span class="site-state-item-count">43</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -485,7 +485,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
