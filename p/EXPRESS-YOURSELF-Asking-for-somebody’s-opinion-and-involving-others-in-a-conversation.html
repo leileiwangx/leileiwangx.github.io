@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css">
 
 
-  <meta name="keywords" content="CLRS,">
+  <meta name="keywords" content="English,Express yourself,">
 
 
 
@@ -87,18 +87,18 @@
 
 
 
-<meta name="description" content="bisect1234567891011# 第一个大于等于target的index     # 返回x插入a后所在位置的index（如果a中存在与x等值的元素，则插入到左侧）def bisect_left(nums, target):    lo, hi = 0, len(nums) ## hi = len(nums)    while lo &amp;lt; hi:        mi = lo + ((">
-<meta name="keywords" content="CLRS">
+<meta name="description" content="Asking for somebody’s opinion and involving others in a conversation 征求他人意见和邀请参与谈话In a meeting or a discussion you may need to find out what other people think. In some exams, you have to show that yo">
+<meta name="keywords" content="English,Express yourself">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Algorithm Templates">
-<meta property="og:url" content="https://wangleileichina.github.io/p/Algorithm-Templates.html">
+<meta property="og:title" content="EXPRESS YOURSELF: Asking for somebody’s opinion and involving others in a conversation">
+<meta property="og:url" content="https://wangleileichina.github.io/p/EXPRESS-YOURSELF-Asking-for-somebody’s-opinion-and-involving-others-in-a-conversation.html">
 <meta property="og:site_name" content="PREPARES">
-<meta property="og:description" content="bisect1234567891011# 第一个大于等于target的index     # 返回x插入a后所在位置的index（如果a中存在与x等值的元素，则插入到左侧）def bisect_left(nums, target):    lo, hi = 0, len(nums) ## hi = len(nums)    while lo &amp;lt; hi:        mi = lo + ((">
+<meta property="og:description" content="Asking for somebody’s opinion and involving others in a conversation 征求他人意见和邀请参与谈话In a meeting or a discussion you may need to find out what other people think. In some exams, you have to show that yo">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2023-11-16T09:44:54.711Z">
+<meta property="og:updated_time" content="2024-04-26T01:48:36.617Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Algorithm Templates">
-<meta name="twitter:description" content="bisect1234567891011# 第一个大于等于target的index     # 返回x插入a后所在位置的index（如果a中存在与x等值的元素，则插入到左侧）def bisect_left(nums, target):    lo, hi = 0, len(nums) ## hi = len(nums)    while lo &amp;lt; hi:        mi = lo + ((">
+<meta name="twitter:title" content="EXPRESS YOURSELF: Asking for somebody’s opinion and involving others in a conversation">
+<meta name="twitter:description" content="Asking for somebody’s opinion and involving others in a conversation 征求他人意见和邀请参与谈话In a meeting or a discussion you may need to find out what other people think. In some exams, you have to show that yo">
 
 
 
@@ -126,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="https://wangleileichina.github.io/p/Algorithm-Templates.html">
+  <link rel="canonical" href="https://wangleileichina.github.io/p/EXPRESS-YOURSELF-Asking-for-somebody’s-opinion-and-involving-others-in-a-conversation.html">
 
 
 
 
 
-  <title> Algorithm Templates | PREPARES </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title> EXPRESS YOURSELF: Asking for somebody’s opinion and involving others in a conversation | PREPARES </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -283,7 +283,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://wangleileichina.github.io/p/Algorithm-Templates.html">
+    <link itemprop="mainEntityOfPage" href="https://wangleileichina.github.io/p/EXPRESS-YOURSELF-Asking-for-somebody’s-opinion-and-involving-others-in-a-conversation.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="LeileiWang">
@@ -304,7 +304,7 @@
             
             
               
-                Algorithm Templates
+                EXPRESS YOURSELF: Asking for somebody’s opinion and involving others in a conversation
               
             
           </h1>
@@ -319,8 +319,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2023-03-14T23:07:26+08:00">
-                2023-03-14
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2024-04-26T09:46:23+08:00">
+                2024-04-26
               </time>
             
 
@@ -355,13 +355,18 @@
       
 
       
-        <h1 id="bisect"><a href="#bisect" class="headerlink" title="bisect"></a>bisect</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 第一个大于等于target的index     </span></span><br><span class="line"><span class="comment"># 返回x插入a后所在位置的index（如果a中存在与x等值的元素，则插入到左侧）</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">bisect_left</span><span class="params">(nums, target)</span>:</span></span><br><span class="line">    lo, hi = <span class="number">0</span>, len(nums) <span class="comment">## hi = len(nums)</span></span><br><span class="line">    <span class="keyword">while</span> lo &lt; hi:</span><br><span class="line">        mi = lo + ((hi - lo) &gt;&gt; <span class="number">1</span>)</span><br><span class="line">        <span class="keyword">if</span> nums[mi] &gt;= target:</span><br><span class="line">            hi = mi</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            lo = mi + <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> lo</span><br></pre></td></tr></table></figure>
+        <h2 id="Asking-for-somebody’s-opinion-and-involving-others-in-a-conversation-征求他人意见和邀请参与谈话"><a href="#Asking-for-somebody’s-opinion-and-involving-others-in-a-conversation-征求他人意见和邀请参与谈话" class="headerlink" title="Asking for somebody’s opinion and involving others in a conversation 征求他人意见和邀请参与谈话"></a>Asking for somebody’s opinion and involving others in a conversation 征求他人意见和邀请参与谈话</h2><p>In a meeting or a discussion you may need to find out what other people think. In some exams, you have to show that you can control the conversation by asking for contributions from the examiner. 在会议或讨论中想知道别人的想法，或在某些考试中请主考人发表意见以显示你可以主导谈话，可用以下表达方式：</p>
+<ul>
+<li>I would say it’s OK in the city, but not in the country. What do you think?<br>要我说，这在城市里还可以，但在乡村不行。你怎么看？</li>
+<li>My feeling is that we could improve our performance. Do you agree with that?<br>我觉得我们可以改善业绩。这么说你同意吗？</li>
+<li>What would you say if we waited another month?<br>如果我们再等一个月，你说怎么样？</li>
+<li>What about you? Do you cycle?<br>你呢？你会骑自行车吗？</li>
+<li>Which place do you think is more dangerous?<br>你认为哪个地方更危险？</li>
+<li>The traffic’s going faster there, isn’t it?/don’t you think?<br>那里的交通畅通多了，是不是？ ／你不觉得吗？</li>
+<li>Would you say that traffic’s going faster there?<br>你觉得那里的交通更加畅通了吗？</li>
+<li>So this would be a better option, right? (NAmE, informal)<br>那么，这会是更好的选择，对吧？</li>
+</ul>
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 返回x插入a后所在位置的index（如果a中存在与x等值的元素，则插入到右侧）</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">bisect_right</span><span class="params">(nums, target)</span>:</span></span><br><span class="line">    lo, hi = <span class="number">0</span>, len(nums) <span class="comment">## hi = len(nums)</span></span><br><span class="line">    <span class="keyword">while</span> lo &lt; hi:</span><br><span class="line">        mi = lo + ((hi - lo) &gt;&gt; <span class="number">1</span>)</span><br><span class="line">        <span class="keyword">if</span> nums[mi] &gt; target:</span><br><span class="line">            hi = mi</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            lo = mi + <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> lo</span><br></pre></td></tr></table></figure>
-
-<h1 id="trie"><a href="#trie" class="headerlink" title="trie"></a>trie</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Trie</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span> -&gt; <span class="keyword">None</span>:</span></span><br><span class="line">        self.root = &#123;&#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">insert</span><span class="params">(self, word)</span>:</span></span><br><span class="line">        cur = self.root</span><br><span class="line">        <span class="keyword">for</span> c <span class="keyword">in</span> word:</span><br><span class="line">            <span class="keyword">if</span> c <span class="keyword">not</span> <span class="keyword">in</span> cur:</span><br><span class="line">                cur[c] = &#123;&#125;</span><br><span class="line">            cur = cur[c]</span><br><span class="line">        cur[<span class="string">'#'</span>] = <span class="literal">True</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">search</span><span class="params">(self, word)</span>:</span></span><br><span class="line">        cur = self.root</span><br><span class="line">        <span class="keyword">for</span> c <span class="keyword">in</span> word:</span><br><span class="line">            <span class="keyword">if</span> c <span class="keyword">not</span> <span class="keyword">in</span> cur:</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">            cur = cur[c]</span><br><span class="line">        <span class="comment"># return cur['#']</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">True</span> <span class="keyword">if</span> cur <span class="keyword">and</span> <span class="string">'#'</span> <span class="keyword">in</span> cur <span class="keyword">else</span> <span class="literal">False</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">startWith</span><span class="params">(self, prefix)</span>:</span></span><br><span class="line">        cur = self.root</span><br><span class="line">        <span class="keyword">for</span> c <span class="keyword">in</span> prefix:</span><br><span class="line">            <span class="keyword">if</span> c <span class="keyword">not</span> <span class="keyword">in</span> cur:</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">            cur = cur[c]</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">True</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="quick-sort"><a href="#quick-sort" class="headerlink" title="quick sort"></a>quick sort</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> random <span class="keyword">import</span> randint</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">quick_sort</span><span class="params">(nums)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">partition</span><span class="params">(lo, hi)</span>:</span></span><br><span class="line">        rand_idx = randint(lo, hi)</span><br><span class="line">        nums[rand_idx], nums[hi] = nums[hi], nums[rand_idx]</span><br><span class="line">        pivot = nums[hi]</span><br><span class="line">        i = lo</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(lo, hi):</span><br><span class="line">            <span class="keyword">if</span> nums[j] &lt; pivot:</span><br><span class="line">                <span class="comment"># i停留在大于pivot的数， 等到j找到下一个小于pivot的数交换</span></span><br><span class="line">                nums[i], nums[j] = nums[j], nums[i]</span><br><span class="line">                i += <span class="number">1</span></span><br><span class="line">        nums[i], nums[hi] = nums[hi], nums[i]</span><br><span class="line">        <span class="keyword">return</span> i</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">sort</span><span class="params">(lo, hi)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> lo &gt;= hi:</span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line">        idx = partition(lo, hi)</span><br><span class="line">        sort(lo, idx - <span class="number">1</span>) <span class="comment">### idx - 1</span></span><br><span class="line">        sort(idx + <span class="number">1</span>, hi)</span><br><span class="line"></span><br><span class="line">    sort(<span class="number">0</span>, len(nums) - <span class="number">1</span>)</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -384,7 +389,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/CLRS/" rel="tag"># CLRS</a>
+            <a href="/tags/English/" rel="tag"># English</a>
+          
+            <a href="/tags/Express-yourself/" rel="tag"># Express yourself</a>
           
         </div>
       
@@ -397,8 +404,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/p/Binary-Index-Tree.html" rel="next" title="Binary Index Tree">
-                <i class="fa fa-chevron-left"></i> Binary Index Tree
+              <a href="/p/EXPRESS-YOURSELF-Telling-somebody-to-do-something.html" rel="next" title="EXPRESS YOURSELF: Telling somebody to do something">
+                <i class="fa fa-chevron-left"></i> EXPRESS YOURSELF: Telling somebody to do something
               </a>
             
           </div>
@@ -406,10 +413,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/p/Tmux.html" rel="prev" title="Tmux">
-                Tmux <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -541,7 +544,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#bisect"><span class="nav-number">1.</span> <span class="nav-text">bisect</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#trie"><span class="nav-number">2.</span> <span class="nav-text">trie</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#quick-sort"><span class="nav-number">3.</span> <span class="nav-text">quick sort</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Asking-for-somebody’s-opinion-and-involving-others-in-a-conversation-征求他人意见和邀请参与谈话"><span class="nav-number">1.</span> <span class="nav-text">Asking for somebody’s opinion and involving others in a conversation 征求他人意见和邀请参与谈话</span></a></li></ol></div>
             
 
           </div>
