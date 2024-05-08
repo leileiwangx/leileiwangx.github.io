@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css">
 
 
-  <meta name="keywords" content="Sliding Window,">
+  <meta name="keywords" content="English,Express yourself,">
 
 
 
@@ -87,21 +87,18 @@
 
 
 
-<meta name="description" content="In many problems dealing with an array (or a LinkedList), we are asked to find or calculate something among all the contiguous subarrays (or sublists) of a given size. For example, take a look at this">
-<meta name="keywords" content="Sliding Window">
+<meta name="description" content="Disagreeing 表达不同意见In a discussion, you may think that what other people say is wrong, but there are polite ways to convey this. It is common to express support for something that the other person says">
+<meta name="keywords" content="English,Express yourself">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Sliding Window">
-<meta property="og:url" content="https://wangleileichina.github.io/p/Sliding-Window.html">
+<meta property="og:title" content="EXPRESS YOURSELF: Disagreeing">
+<meta property="og:url" content="https://wangleileichina.github.io/p/EXPRESS-YOURSELF-Disagreeing.html">
 <meta property="og:site_name" content="PREPARES">
-<meta property="og:description" content="In many problems dealing with an array (or a LinkedList), we are asked to find or calculate something among all the contiguous subarrays (or sublists) of a given size. For example, take a look at this">
+<meta property="og:description" content="Disagreeing 表达不同意见In a discussion, you may think that what other people say is wrong, but there are polite ways to convey this. It is common to express support for something that the other person says">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://github.com/wangleileichina/HexoPosts/raw/master/algorithm/sliding_window/00.png">
-<meta property="og:image" content="https://github.com/wangleileichina/HexoPosts/raw/master/algorithm/sliding_window/01.png">
-<meta property="og:updated_time" content="2023-11-16T09:44:54.730Z">
+<meta property="og:updated_time" content="2024-05-08T01:20:17.348Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Sliding Window">
-<meta name="twitter:description" content="In many problems dealing with an array (or a LinkedList), we are asked to find or calculate something among all the contiguous subarrays (or sublists) of a given size. For example, take a look at this">
-<meta name="twitter:image" content="https://github.com/wangleileichina/HexoPosts/raw/master/algorithm/sliding_window/00.png">
+<meta name="twitter:title" content="EXPRESS YOURSELF: Disagreeing">
+<meta name="twitter:description" content="Disagreeing 表达不同意见In a discussion, you may think that what other people say is wrong, but there are polite ways to convey this. It is common to express support for something that the other person says">
 
 
 
@@ -129,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="https://wangleileichina.github.io/p/Sliding-Window.html">
+  <link rel="canonical" href="https://wangleileichina.github.io/p/EXPRESS-YOURSELF-Disagreeing.html">
 
 
 
 
 
-  <title> Sliding Window | PREPARES </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title> EXPRESS YOURSELF: Disagreeing | PREPARES </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -286,7 +283,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://wangleileichina.github.io/p/Sliding-Window.html">
+    <link itemprop="mainEntityOfPage" href="https://wangleileichina.github.io/p/EXPRESS-YOURSELF-Disagreeing.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="LeileiWang">
@@ -307,7 +304,7 @@
             
             
               
-                Sliding Window
+                EXPRESS YOURSELF: Disagreeing
               
             
           </h1>
@@ -322,8 +319,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-06-06T20:02:28+08:00">
-                2021-06-06
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2024-05-08T09:18:06+08:00">
+                2024-05-08
               </time>
             
 
@@ -358,37 +355,20 @@
       
 
       
-        <p>In many problems dealing with an array (or a LinkedList), we are asked to find or calculate something among all the contiguous subarrays (or sublists) of a given size. For example, take a look at this problem:</p>
-<blockquote>
-<p>Given an array, find the average of all contiguous subarrays of size “K” in it.</p>
-</blockquote>
-<p>Let’s understand this problem with a real input:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Array: [<span class="number">1</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">6</span>, <span class="number">-1</span>, <span class="number">4</span>, <span class="number">1</span>, <span class="number">8</span>, <span class="number">2</span>], K=<span class="number">5</span></span><br></pre></td></tr></table></figure>
-
-<p>Here, we are asked to find the average of all contiguous subarrays of size “5” in the given array. Let’s solve this:</p>
-<ol>
-<li>For the first 5 numbers (subarray from index 0~4), the average is: (1+3+2+6-1)/5 = 2.2;</li>
-<li>The average of next 5 numbers (subarray from index 1~5) is: (3+2+6-1+4)/5 = 2.8;</li>
-<li>For the next 5 numbers (subarray from index 2~6), the average is: (2+6-1+4+1)/5 = 2.4;</li>
-<li>…</li>
-</ol>
-<p>Here is the final output containing the averages of all contiguous subarrays of size 5:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Output: [<span class="number">2.2</span>, <span class="number">2.8</span>, <span class="number">2.4</span>, <span class="number">3.6</span>, <span class="number">2.8</span>]</span><br></pre></td></tr></table></figure>
-
-<a id="more"></a>
-
-<p>A brute-force algorithm will calculate the sum of every 5-element contiguous subarray of the given array and divide the sum by “5” to find the average. This is what the algorithm will look like:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">find_averages_of_subarrays</span><span class="params">(k, arr)</span>:</span></span><br><span class="line">    result = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(len(arr) - k + <span class="number">1</span>):</span><br><span class="line">        element_sum = <span class="number">0.0</span></span><br><span class="line">        <span class="comment"># find sum of next `K` elements</span></span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(i, i + k):</span><br><span class="line">            element_sum += arr[j]</span><br><span class="line">            <span class="comment"># calculate average</span></span><br><span class="line">            result.append(element_sum / k)</span><br><span class="line">    <span class="keyword">return</span> result</span><br></pre></td></tr></table></figure>
-
-<p><strong>Time Complexity</strong>: Since for every element of the input array, we are calculating the sum of its next “K” elements, the time complexity of the above algorithm will be O(N*K) where “N” is the number of elements in the input array.</p>
-<p>The inefficiency is that for any two consecutive subarrays of size “5”, the overlapping part (which will contain four elements) will be evaluated twice. For example, take the above-mentioned input:<br><img src="https://github.com/wangleileichina/HexoPosts/raw/master/algorithm/sliding_window/00.png" alt></p>
-<p>As you can see, there are four overlapping elements between the subarray (indexed from 0~4) and the subarray (indexed from 1~5). Can we somehow reuse the sum we have calculated for the overlapping elements?</p>
-<p>The efficient way to solve this problem would be to visualize each contiguous subarray as a sliding window of “5” elements. This means that we will slide the window by one element when we move on to the next subarray. To reuse the sum from the previous subarray, we will subtract the element going out of the window and add the element now being included in the sliding window. This will save us from going through the whole subarray to find the sum and, as a result, the algorithm complexity will reduce to O(N):<br><img src="https://github.com/wangleileichina/HexoPosts/raw/master/algorithm/sliding_window/01.png" alt></p>
-<p>Here is the algorithm for the <em>Sliding Window</em> approach:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">find_averages_of_subarrays</span><span class="params">(k, arr)</span>:</span></span><br><span class="line">    result = []</span><br><span class="line">    window_sum, start = <span class="number">0.0</span>, <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> end <span class="keyword">in</span> range(len(arr)):</span><br><span class="line">        window_sum += arr[end]</span><br><span class="line">        <span class="keyword">if</span> end &gt;= k - <span class="number">1</span>:</span><br><span class="line">            result.append(window_sum / k)</span><br><span class="line">            window_sum -= arr[start]</span><br><span class="line">            start += <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> result</span><br></pre></td></tr></table></figure>
-
-<p>In some problems, the size of the sliding window is not fixed. We have to expand or shrink the window based on the problem constraints.</p>
-<h2 id="LeetCode"><a href="#LeetCode" class="headerlink" title="LeetCode"></a>LeetCode</h2><p><a href="https://leetcode-cn.com/problems/minimum-size-subarray-sum/submissions/" target="_blank" rel="noopener">209. Minimum Size Subarray Sum</a><br><a href="https://leetcode-cn.com/problems/fruit-into-baskets/" target="_blank" rel="noopener">904. Fruit Into Baskets</a><br><a href="https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/" target="_blank" rel="noopener">3. Longest Substring Without Repeating Characters</a><br><a href="https://leetcode-cn.com/problems/longest-repeating-character-replacement/" target="_blank" rel="noopener">424. Longest Repeating Character Replacement</a><br><a href="https://leetcode-cn.com/problems/max-consecutive-ones-iii/" target="_blank" rel="noopener">1004. Max Consecutive Ones III</a><br><a href="https://leetcode-cn.com/problems/permutation-in-string/" target="_blank" rel="noopener">567. Permutation in String</a><br><a href="https://leetcode-cn.com/problems/minimum-window-substring/" target="_blank" rel="noopener">76. Minimum Window Substring</a><br><a href="https://leetcode-cn.com/problems/find-all-anagrams-in-a-string/" target="_blank" rel="noopener">438.Find All Anagrams in a String</a><br><a href="https://leetcode-cn.com/problems/substring-with-concatenation-of-all-words/" target="_blank" rel="noopener">30. Substring with Concatenation of All Words</a><br><a href="https://leetcode-cn.com/problems/subarrays-with-k-different-integers/" target="_blank" rel="noopener">992. Subarrays with K Different Integers</a><br><a href="https://leetcode-cn.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/" target="_blank" rel="noopener">1438. Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit</a><br><a href="https://leetcode-cn.com/problems/maximum-average-subarray-i/" target="_blank" rel="noopener">643. Maximum Average Subarray I</a></p>
+        <h2 id="Disagreeing-表达不同意见"><a href="#Disagreeing-表达不同意见" class="headerlink" title="Disagreeing 表达不同意见"></a>Disagreeing 表达不同意见</h2><p>In a discussion, you may think that what other people say is wrong, but there are polite ways to convey this. It is common to express support for something that the other person says before expressing disagreement.在讨论中可用比较礼貌的方式表示不同意别人的说法。在表达不同意见之前通常会对别人的说法表示一定的支持：</p>
+<ul>
+<li>I’m sorry, I don’t agree/I have to disagree with you there.<br>对不起，在那一点上我跟你有不同看法。</li>
+<li>Well, actually, I’m not sure that that’s true.<br>嗯，其实我拿不准那是否属实。</li>
+<li>I don’t think that is exactly right.<br>我认为那不见得完全正确。</li>
+<li>I wouldn’t agree that that’s the best solution.<br>我不认为那是最好的解决办法。</li>
+<li>I have to say that I don’t find that argument very convincing.<br>我得说我觉得这个论据不是很有说服力。</li>
+<li>I can’t go along with that idea.<br>我不同意那个看法。</li>
+<li>I take/see your point, but I don’t think it would work in practice.<br>我明白你的意思，但我认为实际上那是行不通的。</li>
+<li>Actually, I think that would make the situation worse.<br>实际上，我觉得那会使情况更糟。</li>
+<li>Actually, I’m not sure that’s the best plan.<br>事实上我不太肯定那是最好的方案。</li>
+<li>I understand where you’re coming from, but I think we might want to take a different approach here.<br>我明白你为什么这么认为，但我想这里我们可能要采取不同的方法。</li>
+<li>I can see why you might feel that way, but I think we need to handle this differently.<br>我明白你为什么会这么想，但我认为我们需要以不同的方式处理这件事。</li>
+</ul>
 
       
     </div>
@@ -412,7 +392,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Sliding-Window/" rel="tag"># Sliding Window</a>
+            <a href="/tags/English/" rel="tag"># English</a>
+          
+            <a href="/tags/Express-yourself/" rel="tag"># Express yourself</a>
           
         </div>
       
@@ -425,8 +407,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/p/UnionFindSet.html" rel="next" title="UnionFindSet">
-                <i class="fa fa-chevron-left"></i> UnionFindSet
+              <a href="/p/EXPRESS-YOURSELF-Offering-somebody-something.html" rel="next" title="EXPRESS YOURSELF: Offering somebody something">
+                <i class="fa fa-chevron-left"></i> EXPRESS YOURSELF: Offering somebody something
               </a>
             
           </div>
@@ -434,10 +416,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/p/heap-sort.html" rel="prev" title="heap sort">
-                heap sort <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -569,7 +547,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#LeetCode"><span class="nav-number">1.</span> <span class="nav-text">LeetCode</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Disagreeing-表达不同意见"><span class="nav-number">1.</span> <span class="nav-text">Disagreeing 表达不同意见</span></a></li></ol></div>
             
 
           </div>
