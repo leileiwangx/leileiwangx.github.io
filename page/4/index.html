@@ -280,6 +280,126 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://wangleileichina.github.io/p/Tmux.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="LeileiWang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="PREPARES">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/p/Tmux.html" itemprop="url">
+                  Tmux
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2023-11-17T14:14:12+08:00">
+                2023-11-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Terminal-Multiplexer"><a href="#Terminal-Multiplexer" class="headerlink" title="Terminal Multiplexer"></a>Terminal Multiplexer</h1><h2 id="custom-config"><a href="#custom-config" class="headerlink" title="custom config"></a>custom config</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># set the base index for windows to 1 instead of 0</span></span><br><span class="line"><span class="keyword">set</span> -g base-<span class="keyword">index</span> <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># set the base index for panes to 1 instead of 0</span></span><br><span class="line">setw -g pane-base-<span class="keyword">index</span> <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># reload the file with prefix r</span></span><br><span class="line">bind r <span class="keyword">source</span>-<span class="keyword">file</span> ~/.tmux.conf \; display "Reloaded!"</span><br><span class="line"></span><br><span class="line"><span class="comment"># splitting panes with | and -</span></span><br><span class="line">bind | split-window -h</span><br><span class="line">bind - split-window -v</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">set</span> -g mouse <span class="keyword">off</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># set the status line's color</span></span><br><span class="line"><span class="keyword">set</span> -g <span class="keyword">status</span>-<span class="keyword">style</span> fg=white,bg=black</span><br><span class="line"></span><br><span class="line"><span class="comment"># set the color of the window list</span></span><br><span class="line">setw -g <span class="keyword">window</span>-<span class="keyword">status</span>-<span class="keyword">style</span> fg=cyan,bg=black</span><br><span class="line"></span><br><span class="line"><span class="comment"># set colors for the active window</span></span><br><span class="line">setw -g <span class="keyword">window</span>-<span class="keyword">status</span>-<span class="keyword">current</span>-<span class="keyword">style</span> fg=white,bold,bg=green</span><br><span class="line"></span><br><span class="line"><span class="comment"># colors for pane borders</span></span><br><span class="line">setw -g pane-border-<span class="keyword">style</span> fg=green,bg=black</span><br><span class="line">setw -g pane-active-border-<span class="keyword">style</span> fg=<span class="keyword">while</span>,bg=yellow</span><br><span class="line"></span><br><span class="line"><span class="comment"># active pane normal, other shaded out</span></span><br><span class="line">setw -g <span class="keyword">window</span>-<span class="keyword">style</span> fg-colour240,bg=colour235</span><br><span class="line">setw -g <span class="keyword">window</span>-active-<span class="keyword">style</span> fg=white,bg=black</span><br><span class="line"></span><br><span class="line"><span class="comment"># command/message line</span></span><br><span class="line"><span class="keyword">set</span> -g message-<span class="keyword">style</span> fg=<span class="keyword">while</span>,bold,bg=black</span><br><span class="line"></span><br><span class="line"><span class="comment"># status line right side 21-Otc 13:37</span></span><br><span class="line"><span class="keyword">set</span> -g <span class="keyword">status</span>-<span class="keyword">right</span> <span class="string">"#[fg=cyan]%d %b %R"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># status line left side to show session:window:pane</span></span><br><span class="line"><span class="keyword">set</span> -g <span class="keyword">status</span>-<span class="keyword">left</span>-<span class="keyword">length</span> <span class="number">40</span></span><br><span class="line"><span class="keyword">set</span> -g <span class="keyword">status</span>-<span class="keyword">left</span> <span class="string">"#[fg=green]Session:#S:#[fg=yellow]#I #[fg=cyan]#P  "</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># update the status line every sixty seconds</span></span><br><span class="line"><span class="keyword">set</span> -g <span class="keyword">status</span>-<span class="built_in">interval</span> <span class="number">60</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># center the window list in the status line</span></span><br><span class="line"><span class="keyword">set</span> -g <span class="keyword">status</span>-justify centre</span><br><span class="line"></span><br><span class="line"><span class="comment"># enbale vi keys</span></span><br><span class="line">setw -g <span class="keyword">mode</span>-<span class="keyword">keys</span> vi</span><br><span class="line"></span><br><span class="line"><span class="comment"># log output to a text file on demand</span></span><br><span class="line">bind P <span class="keyword">pipe</span>-pane -o <span class="string">"cat &gt;&gt;~/#W.log"</span> \; display "Toggled logging to ~/<span class="comment">#W.log"</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference:"></a>Reference:</h2><p>tmux 2: Productive Mouse-Free development</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="https://wangleileichina.github.io/p/Algorithm-Templates.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -777,142 +897,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://wangleileichina.github.io/p/Designing-Uber-backend.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="LeileiWang">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="PREPARES">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/p/Designing-Uber-backend.html" itemprop="url">
-                  Designing Uber backend
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-09-08T22:42:01+08:00">
-                2021-09-08
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="What-is-Uber"><a href="#What-is-Uber" class="headerlink" title="What is Uber?"></a>What is Uber?</h2><p>Uber enables its customers to book drivers for taxi rides. Uber drivers use their personal cars to drive customers around. Both customers and drivers communicate with each other through their smartphones using the Uber app.</p>
-<h2 id="Requirements-and-Goals-of-the-System"><a href="#Requirements-and-Goals-of-the-System" class="headerlink" title="Requirements and Goals of the System"></a>Requirements and Goals of the System</h2><p>Let’s start with building a simpler version of Uber.<br>There are two types of users (Drivers, Customers) in our system:</p>
-<ul>
-<li>Drivers need to regularly notify the service about their current location and their availability to pick passengers;</li>
-<li>Passengers get to see all the nearby available drivers;</li>
-<li>Customer can request a ride; nearby drivers are notified that a customer is ready to be picked up;</li>
-<li>Once a driver and a customer accept a ride, they can constantly see each other’s current location until the trip finishes;</li>
-<li>Upon reaching the destination, the driver marks the journey complete to become available for the next ride;</li>
-</ul>
-<h2 id="Capacity-Estimation-and-Constraints"><a href="#Capacity-Estimation-and-Constraints" class="headerlink" title="Capacity Estimation and Constraints"></a>Capacity Estimation and Constraints</h2><ul>
-<li>Let’s assume we have 300M customers and 1M drivers with 1M daily active customers and 500K daily active drivers;</li>
-<li>Let’s assume 1M daily rides;</li>
-<li>Let’s assume that all active drivers notify their current location every three seconds;</li>
-<li>Once a customer puts in a request for a ride, the system should be able to contact drivers in real-time;</li>
-</ul>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/p/Designing-Uber-backend.html#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -960,7 +944,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">57</span>
+                <span class="site-state-item-count">58</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
